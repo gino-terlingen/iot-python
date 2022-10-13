@@ -1,0 +1,5 @@
+print('naam getal', 'dec', 'hex', 'bin', sep='\t')
+print('----------', '---', '---', '---', sep='\t')
+print('geboortejaar', '2002', '0x7D2', '11111010010', sep='\t')
+print('leeftijd', '20', '0x14', '0b10100', sep='\t')
+print('schoenmaat', '50', '0x32', '0b110010', sep='\t')
