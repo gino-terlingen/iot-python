@@ -20,5 +20,5 @@ while True:
         print('fout')
 
     if score == 2:
-        print(f"jouw score is {score}")
+        print(f"jouw score is {score}\n in {attempts} pogingen")
         break
