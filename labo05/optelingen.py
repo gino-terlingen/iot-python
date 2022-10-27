@@ -11,7 +11,7 @@ while True:
         answer = int(input('product: '))
     except ValueError:
         print('Ongeldig getal')
-        exit()
+        continue
     product = n1 * n2
     if answer == product:
         print('joempie het is juist!')
@@ -22,6 +22,3 @@ while True:
     if score == 2:
         print(f"jouw score is {score}")
         break
-
-
-    
