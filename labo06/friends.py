@@ -4,7 +4,9 @@ users = []
 while True:
     user = input("vrienden:")
     if user == "":
-        print(users)
+        for x in users:
+            print(x)
+        print(len(users))
         exit()
     else:
         users.append(user)
