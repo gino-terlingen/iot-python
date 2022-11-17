@@ -1,8 +1,8 @@
-def print_title():
-    print("")
-    title = input("geef een title: ")
+def print_title(title, ond):
     print(title) 
     lengte = len(title)
-    print('_'*lengte)
+    print(ond*lengte)
 
-print_title()
+
+
+print_title('tears of a clown', '=')
