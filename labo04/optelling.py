@@ -1,7 +1,7 @@
 
 import string
 
-
+print ('welkom bij dit optel program')
 getal1 =int( input('getal1: '))
 
 
