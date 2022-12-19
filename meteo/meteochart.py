@@ -27,3 +27,12 @@ print  (latitude)
 
 print (longitude)          
 
+import http.client
+
+conn = http.client.HTTPSConnection("api.open-meteo.com")
+payload = ''
+headers = {}
+conn.request("GET", f"/v1/forecast?hourly=temperature_2m&latitude={latitude}&longitude={longitude}", payload, headers)
+res = conn.getresponse()
+data = res.read()
+print(data.decode("utf-8"))
