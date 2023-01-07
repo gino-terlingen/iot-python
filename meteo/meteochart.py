@@ -11,6 +11,7 @@ print ("duitsland")
 print ("spanje")
 print ("engeland")
 print ("schotland")
+print ("usa")
 
 stad = input("we zullen eens kijken voor: ")
 
@@ -30,15 +31,13 @@ elif stad == ("engeland"):
 elif stad == ("schotland"):
     latitude = 55.87
     longitude = -4.26
+elif stad == ("usa"):
+    latitude = 38.90
+    longitude = -77.04
 else:
     print("dit is geen optie")
     exit()
-
-
-
-#print  (latitude)
-
-#print (longitude)          
+          
 
 
 landUrl = f'/v1/forecast?latitude={latitude}&longitude={longitude}&hourly=temperature_2m'
@@ -138,49 +137,47 @@ t.penup()
 
 t.pencolor('#000000')
 t.goto(-510.00,380.00)
-t.write("35°c", font=("verdana",15,"normal"))
+t.write("45°c", font=("verdana",15,"normal"))
 t.goto(-510.00,340.00)
-t.write("30°c", font=("verdana",15,"normal"))
+t.write("40°c", font=("verdana",15,"normal"))
 t.goto(-510.00,300.00)
-t.write("25°c", font=("verdana",15,"normal"))
+t.write("35°c", font=("verdana",15,"normal"))
 t.goto(-510.00,260.00)
-t.write("20°c", font=("verdana",15,"normal"))
+t.write("30°c", font=("verdana",15,"normal"))
 t.goto(-510.00,220.00)
-t.write("15°c", font=("verdana",15,"normal"))
+t.write("25°c", font=("verdana",15,"normal"))
 t.goto(-510.00,180.00)
-t.write("10°c", font=("verdana",15,"normal"))
+t.write("20°c", font=("verdana",15,"normal"))
 t.goto(-510.00,140.00)
-t.write("5°c", font=("verdana",15,"normal"))
+t.write("15°c", font=("verdana",15,"normal"))
 t.goto(-510.00,100.00)
-t.write("0°c", font=("verdana",15,"normal"))
+t.write("10°c", font=("verdana",15,"normal"))
 t.goto(-510.00,60.00)
-t.write("-5°c", font=("verdana",15,"normal"))
+t.write("5°c", font=("verdana",15,"normal"))
 t.goto(-510.00,20.00)
-t.write("-10°c", font=("verdana",15,"normal"))
+t.write("0°c", font=("verdana",15,"normal"))
 t.goto(-510.00,-20.00)
-t.write("-15°c", font=("verdana",15,"normal"))
+t.write("-5°c", font=("verdana",15,"normal"))
 t.goto(-510.00,-60.00)
-t.write("-20°c", font=("verdana",15,"normal"))
+t.write("-10°c", font=("verdana",15,"normal"))
 t.goto(-510.00,-100.00)
-t.write("-25°c", font=("verdana",15,"normal"))
+t.write("-15°c", font=("verdana",15,"normal"))
 t.goto(-510.00,-140.00)
-t.write("-30°c", font=("verdana",15,"normal"))
+t.write("-20°c", font=("verdana",15,"normal"))
 t.goto(-510.00,-180.00)
-t.write("-35°c", font=("verdana",15,"normal"))
+t.write("-25°c", font=("verdana",15,"normal"))
 t.goto(-510.00,-220.00)
-t.write("-40°c", font=("verdana",15,"normal"))
+t.write("-30°c", font=("verdana",15,"normal"))
 t.goto(-510.00,-260.00)
-t.write("-45°c", font=("verdana",15,"normal"))
+t.write("-35°c", font=("verdana",15,"normal"))
 t.goto(-510.00,-300.00)
-t.write("-50°c", font=("verdana",15,"normal"))
+t.write("-40°c", font=("verdana",15,"normal"))
 
 t.goto(0.00,400.00)
 t.write(stad.upper(), font=("verdana",15,"normal"))
 
 t.tracer(1, 8)
 t.st()
-
-
 
 
 t.speed(2)
