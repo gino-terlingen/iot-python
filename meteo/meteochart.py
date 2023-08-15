@@ -76,8 +76,8 @@ api = json.loads(res.read())
 
 
 X = 0
-XScale = 6
-YScale = 9
+Xschaal = 6
+Yschaal = 9
 
 #beging turtle klaar zetten
  
@@ -101,59 +101,43 @@ for i in range(15):
 
 #temperatuur tekenen
 
+O=45
+Y=("°C")
 H=("verdana",15,"normal")
+
 t.penup()
-t.pencolor('#000000')
-t.goto(-505.00,380.00)
-t.write("45°c", font=(H))
-t.setheading(270)
-t.forward(43)
-t.write("40°c", font=(H))
-t.forward(43)
-t.write("35°c", font=(H))
-t.forward(43)
-t.write("30°c", font=(H))
-t.forward(43)
-t.write("25°c", font=(H))
-t.forward(43)
-t.write("20°c", font=(H))
-t.forward(43)
-t.write("15°c", font=(H))
-t.forward(43)
-t.write("10°c", font=(H))
-t.forward(43)
-t.write("5°c", font=(H))
-t.forward(43)
-t.write("0°c", font=(H))
-t.forward(43)
-t.write("-5°c", font=(H))
-t.forward(43)
-t.write("-10°c", font=(H))
-t.forward(43)
-t.write("-15°c", font=(H))
-t.forward(43)
-t.write("-20°c", font=(H))
-t.forward(43)
-t.write("-25°c", font=(H))
-t.forward(43)
-t.write("-30°c", font=(H))
-t.forward(43)
-t.write("-35°c", font=(H))
-t.forward(43)
-t.write("-40°c", font=(H))
+t.pencolor('black')
+t.goto(-510.00,380.00)
+
+for i in range(18):
+    t.write(f"{O}{Y}",font=(H))
+    t.setheading(270)
+    t.forward(43)
+    O-=5
+
+#plaatsnaam tekenen
 
 t.goto(0.00,400.00)
 t.write(stad.upper(), font=(H))
 
-#lijn van de demperatuur tekenen
+time = api['hourly']['time']
+
+
+#lijn van de temperatuur tekenen
 
 t.speed(2)
 t.up()
 t.pencolor('#0000ff')
 t.pensize(10)
-xoffset = 450
+Xverschil = 450
 for Y in api['hourly']['temperature_2m']:
-   t.goto((X * XScale)-xoffset, Y * YScale)
+   t.goto((X * Xschaal)-Xverschil, Y * Yschaal)
    X += 1
    t.down()
+
+
+t.penup()
+t.goto(-505.00,-380.00)
+t.write(time, font=(H))
+
 t.done()
