@@ -6,6 +6,8 @@ import turtle as t
 import http.client as web
 import json
 
+
+
 #tekenen van y-ass
 
 def draw_yaxis():
@@ -18,6 +20,8 @@ def draw_yaxis():
     t.forward(50)
     t.setheading(90)
     t.pendown()
+
+
 
 #tekenen van x-ass
 
@@ -32,12 +36,13 @@ def draw_xaxis():
     t.setheading(0)
     t.pendown() 
 
+
+
 #keuze menu voor de gebruiker
 
 print("hallo welkom bij deze weer grafiek\nkies een land\noptie\nbelgië\nduitsland\nspanje\nengeland\nschotland\nusa")
 
 stad = input("we zullen eens kijken voor: ")
-
 
 if stad == ("belgië"):
     latitude = 50.85
@@ -60,7 +65,9 @@ elif stad == ("usa"):
 else:
     print("dit is geen optie")
     exit()
-          
+
+
+
 #initialize api informatie 
 
 landUrl = f'/v1/forecast?latitude={latitude}&longitude={longitude}&hourly=temperature_2m'
@@ -79,13 +86,17 @@ X = 0
 Xschaal = 6
 Yschaal = 9
 
+
+
 #beging turtle klaar zetten
- 
-t.speed(100)
+
+t.speed(0)
 t.left(90) 
 t.color('red')
 t.penup()
 t.setpos(-450,-350)
+
+
 
 #loops voor de assen tekenen
 
@@ -98,6 +109,8 @@ t.setheading(0)
 
 for i in range(15):
     draw_xaxis()
+
+
 
 #temperatuur tekenen
 
@@ -115,17 +128,18 @@ for i in range(18):
     t.forward(43)
     O-=5
 
+
+
 #plaatsnaam tekenen
 
 t.goto(0.00,400.00)
 t.write(stad.upper(), font=(H))
 
-time = api['hourly']['time']
 
 
 #lijn van de temperatuur tekenen
 
-t.speed(2)
+t.speed(6)
 t.up()
 t.pencolor('#0000ff')
 t.pensize(10)
@@ -135,9 +149,28 @@ for Y in api['hourly']['temperature_2m']:
    X += 1
    t.down()
 
-
+t.pencolor('green')
 t.penup()
-t.goto(-505.00,-380.00)
-t.write(time, font=(H))
+t.goto(-450.00,-380.00)
+t.setheading(0)
+
+
+
+#datum tekenen
+
+P = api["hourly"]["time"]
+K = 0
+
+for i in range(7):
+    M = (P[K])
+    t.write(M[5:-6],font=(H))
+    t.forward(140)
+    K+=24
+
+
+
+#bericht voor de gebruiker
+
+print("dankjewel tot de volgende keer")
 
 t.done()
