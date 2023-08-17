@@ -66,6 +66,9 @@ else:
     print("dit is geen optie")
     exit()
 
+#vaste scherm groote 
+
+t.screensize(700,650)      
 
 
 #initialize api informatie 
@@ -149,14 +152,14 @@ for Y in api['hourly']['temperature_2m']:
    X += 1
    t.down()
 
+
+
+#datum tekenen
+
 t.pencolor('green')
 t.penup()
 t.goto(-450.00,-380.00)
 t.setheading(0)
-
-
-
-#datum tekenen
 
 P = api["hourly"]["time"]
 K = 0
