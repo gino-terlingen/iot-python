@@ -1,0 +1,64 @@
+[a] Add item
+[x] Exit the program
+What do you want to do? Enter number or command.
+> a
+Type the new todo item: 
+> Make the IoT programming exam
+[a] Add item
+[r] Select random item
+[x] Exit the program
+0. Make the IoT programming exam
+What do you want to do? Enter number or command.
+> x
+Do you really want to exit? (y/n)
+> n
+[a] Add item
+[r] Select random item
+[x] Exit the program
+0. Make the IoT programming exam
+What do you want to do? Enter number or command.
+> a
+Type the new todo item: 
+> Score the IoT progamming assignments
+[a] Add item
+[r] Select random item
+[x] Exit the program
+0. Make the IoT programming exam
+1. Score the IoT progamming assignments
+What do you want to do? Enter number or command.
+> a
+Type the new todo item: 
+> Answer students' questions
+[a] Add item
+[r] Select random item
+[x] Exit the program
+0. Make the IoT programming exam
+1. Score the IoT progamming assignments
+2. Answer students' questions
+What do you want to do? Enter number or command.
+> r
+>>> Answer students' questions
+Task 2 in progress. Press enter to indicate completion.
+Press ctrl-c to cancel task.
+> ^C
+[a] Add item
+[r] Select random item
+[x] Exit the program
+0. Make the IoT programming exam
+1. Score the IoT progamming assignments
+2. Answer students' questions
+What do you want to do? Enter number or command.
+> 2
+>>> Answer students' questions
+Task 2 in progress. Press enter to indicate completion.
+Press ctrl-c to cancel task.
+> 
+[a] Add item
+[r] Select random item
+[x] Exit the program
+0. Make the IoT programming exam
+1. Score the IoT progamming assignments
+What do you want to do? Enter number or command.
+> x
+Do you really want to exit? (y/n)
+> y
